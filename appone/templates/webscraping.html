@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webscraping</title>
+</head>
+<body>
+
+<h1>Get links/urls</h1>
+<h3>Enter Url :</h3>
+
+<form class="add_your_class" method="post" action="" >
+     {% csrf_token %}
+    <input class="add_your_class" type="search" name="search">
+    <button class="add_your_class" type="submit"> Search </button>
+</form>
+
+
+<h3>{{web}}</h3>
+
+{% for i in form %}
+{{i}}<br>
+{% endfor %}
+
+</body>
+</html>

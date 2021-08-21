@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stud</title>
+</head>
+<body>
+
+
+<button type="button"><a href="/create">Add Student</a></button>
+<button type="button"><a href="/search">Search Student</a></button>
+<br><br>
+
+
+<ul>
+    <table border="1">
+
+
+	<th>Roll no</th>
+	<th>Name</th>
+	<th>Class</th>
+	<th>School</th>
+	<th>Mobile</th>
+	<th>Address</th>
+	<th>Update/Delete</th>
+{% for object in object_list %}
+        <tr>
+            <th>{{ object.Roll_no }}</th>
+	    <td><a href="/{{ object.Roll_no }}/detail/">{{ object.Name }}</a></td>
+	    <td>{{ object.Class }}</td>
+	    <td>{{ object.School}}</td>
+	    <td>{{ object.Mobile }}</td>
+	    <td>{{ object.Address }}</td>
+	    <td><a href="/{{ object.Roll_no }}/update">Update</a>/<a href="/{{ object.Roll_no }}/delete">Delete</a></td>
+        </tr>
+
+
+        	{% empty %}
+	<li>No objects yet.</li>
+	{% endfor %}
+    </table>
+</ul>
+
+<button type="button"><a href="/logout">logout</a></button>
+
+</body>
+</html>

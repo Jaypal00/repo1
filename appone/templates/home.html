@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+
+<h1>Student Portal</h1>
+
+<button type="button"><a href="/login">Login</a></button>
+<button type="button"><a href="/signup">Signup</a></button>
+<br><br>
+
+<table border="1">
+
+	<th>Roll no</th>
+	<th>Name</th>
+	<th>Class</th>
+	<th>School</th>
+	<th>Mobile</th>
+	<th>Address</th>
+	{% for object in object_list %}
+        <tr>
+			<td>{{ object.Roll_no }}</td>
+	    <td>{{ object.Name }}</td>
+	    <td>{{ object.Class }}</td>
+	    <td>{{ object.School}}</td>
+	    <td>{{ object.Mobile }}</td>
+	    <td>{{ object.Address }}</td>
+        </tr>
+
+
+        	{% empty %}
+	<li>No objects yet.</li>
+	{% endfor %}
+    </table>
+
+<br><br>
+<h1>Webscraping</h1>
+<button type="button"><a href="/webscrap">WebScraping</a></button>
+
+</body>
+</html>

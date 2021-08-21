@@ -1,0 +1,12 @@
+beautifulsoup4==4.9.3
+bs4==0.0.1
+certifi==2021.5.30
+charset-normalizer==2.0.4
+Django==2.2.7
+idna==3.2
+mysqlclient @ file:///E:/clg/z/mysqlclient-1.4.6-cp38-cp38-win32.whl
+pytz==2021.1
+requests==2.26.0
+soupsieve==2.2.1
+sqlparse==0.4.1
+urllib3==1.26.6

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body>
+
+<h1>Search</h1>
+
+<form class="add_your_class" method="GET" action="" >
+    <input class="add_your_class" type="search" name="Name">
+    <button class="add_your_class" type="submit"> Search </button><p>Search Student with name</p>
+</form><br><br>
+
+    {% for object in all_search_results %}
+            <table border="1">
+
+	<th>Roll no</th>
+	<th>Name</th>
+	<th>Class</th>
+	<th>School</th>
+	<th>Mobile</th>
+	<th>Address</th>
+	<th>Maths</th>
+	<th>Physics</th>
+	<th>Chemistry</th>
+	<th>Biology</th>
+	<th>English</th>
+
+        <tr>
+            <td>{{ object.Roll_no }}</td>
+	    <td>{{ object.Name }}</td>
+	    <td>{{ object.Class }}</td>
+	    <td>{{ object.School}}</td>
+	    <td>{{ object.Mobile }}</td>
+	    <td>{{ object.Address }}</td>
+	    <td>{{ object.Maths }}</td>
+	    <td>{{ object.Physics }}</td>
+	    <td>{{ object.Chemistry }}</td>
+	    <td>{{ object.Biology}}</td>
+	    <td>{{ object.English }}</td>
+        </tr>
+    </table>
+    {% empty %}
+        <h2>No results found</h2>
+    {% endfor %}
+
+<br><br>
+<button type="button"><a href="/logout">logout</a></button>
+
+
+</body>
+</html>
